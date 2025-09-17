@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+yellow_tripdata_2021-03.parquet
+.ipynb_checkpoints/
+cluster_storage/
