@@ -11,3 +11,4 @@ wheels/
 yellow_tripdata_2021-03.parquet
 .ipynb_checkpoints/
 cluster_storage/
+data
