@@ -1,9 +1,9 @@
 from pathlib import Path
+import torch
 import datetime
 from torchvision.datasets.celeba import csv
 from torchvision.transforms import Compose, Normalize, ToTensor
 import tqdm
-import torch
 from torchvision.models import resnet18
 from torchvision.datasets import MNIST
 from torch.nn import CrossEntropyLoss
@@ -41,7 +41,7 @@ def train_loop_torch(
         metrics = report_metrics_torch(loss=avg_loss, epoch=epoch)
         Path(local_path).mkdir(parents=True, exist_ok=True)
         save_checkpoint_and_metrics_torch(
-            model=model, metrics=metrics, epoch=epoch, local_path=local_path
+            model=model, metrics=metrics, local_path=local_path
         )
 
 
@@ -88,7 +88,7 @@ def report_metrics_torch(loss: float, epoch: int) -> dict:
 
 
 def save_checkpoint_and_metrics_torch(
-    model: torch.nn.Module, metrics: dict, epoch: int, local_path: str
+    model: torch.nn.Module, metrics: dict, local_path: str
 ) -> None:
     with open(Path(local_path) / "metrics.csv", "a") as f:
         writer = csv.writer(f)
