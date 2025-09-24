@@ -1,0 +1,18 @@
+cloud: Anyscale Cloud
+head_node:
+  instance_type: m5.2xlarge
+  resources:
+    CPU: 0
+    GPU: 0
+  flags: {}
+worker_nodes:
+  - instance_type: g4dn.2xlarge
+    flags: {}
+    name: 1xT4:8CPU-32GB
+    min_nodes: 0
+    max_nodes: 2
+    market_type: ON_DEMAND
+enable_cross_zone_scaling: false
+auto_select_worker_config: false
+flags:
+  allow-cross-zone-autoscaling: false

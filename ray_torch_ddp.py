@@ -80,12 +80,6 @@ def train_loop_ray_train(
         save_checkpoint_and_metrics_ray_train(model, metrics)
 
 
-# INFO: We now can configure scale and GPUs with a `ScalingConfig`
-scaling_config = ray.train.ScalingConfig(
-    num_workers=1,  # The number of worker processes
-    use_gpu=False,
-)
-
 # INFO: Ray Train is built around four key concepts:
 # 1. Training Function: A python function that contains your model training logic
 # 2. Worker: A process that runs the training function
@@ -197,8 +191,9 @@ def save_checkpoint_and_metrics_ray_train(
 # Ray Traing expects all workers to be able to write files to the same persistent storage location
 
 
-storage_folder = "./cluster_storage"
-storage_path = f"file://{Path(storage_folder).resolve()}/training/"
+storage_folder = "/mnt/cluster_storage"
+# storage_path = f"file://{Path(storage_folder).resolve()}/training/" for local
+storage_path = f"{Path(storage_folder).resolve()}/training/"
 # NOTE: We use RunConfig object to specicy the path where results (checkpoints and artifacts ) will be saved
 run_config = ray.train.RunConfig(
     storage_path=storage_path, name="distributed-mnist-resnet"

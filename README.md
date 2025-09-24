@@ -12,7 +12,7 @@ This repository contains practical Python implementations and examples designed 
 ## 📚 Table of Contents
 
 - [Course Overview](#-course-overview)
-- [Learning Path](#-learning-path) 
+- [Learning Path](#-learning-path)
 - [Project Structure](#-project-structure)
 - [Quick Start](#-quick-start)
 - [Key Ray Concepts](#-key-ray-concepts)
@@ -25,19 +25,20 @@ This repository contains practical Python implementations and examples designed 
 
 This repository implements examples for the following **Anyscale course modules**:
 
-| Course Module | Repository Files | Key Concepts |
-|---------------|------------------|-------------|
-| **🏗️ Ray Core Fundamentals** | `ray_core.py`, `ray_actors.py` | Remote functions, ObjectRefs, Actors |
-| **⚡ Ray Core Advanced** | `ray_advanced.py` | Object Store, Runtime Environments, Resource Management |
-| **🤖 Ray AI Libraries** | `ray_ai.py` | XGBoost integration, Distributed ML workflows |
-| **🔥 Ray Train with PyTorch** | `ray_torch.py` | Distributed training, Model parallelism |
-| **🧪 Testing & Utilities** | `ray_minimal_test.py`, shell scripts | Memory management, Cleanup utilities |
+| Course Module                 | Repository Files                     | Key Concepts                                            |
+| ----------------------------- | ------------------------------------ | ------------------------------------------------------- |
+| **🏗️ Ray Core Fundamentals**  | `ray_core.py`, `ray_actors.py`       | Remote functions, ObjectRefs, Actors                    |
+| **⚡ Ray Core Advanced**      | `ray_advanced.py`                    | Object Store, Runtime Environments, Resource Management |
+| **🤖 Ray AI Libraries**       | `ray_ai.py`                          | XGBoost integration, Distributed ML workflows           |
+| **🔥 Ray Train with PyTorch** | `ray_torch.py`                       | Distributed training, Model parallelism                 |
+| **🧪 Testing & Utilities**    | `ray_minimal_test.py`, shell scripts | Memory management, Cleanup utilities                    |
 
 ### 🎯 Learning Objectives
 
 After working through this repository, you'll understand:
+
 - Ray's distributed computing model and core abstractions
-- How to write scalable remote functions and stateful actors  
+- How to write scalable remote functions and stateful actors
 - Object store patterns and memory management strategies
 - Integration of Ray with popular ML libraries (XGBoost, PyTorch)
 - Best practices for distributed training and model serving
@@ -46,9 +47,11 @@ After working through this repository, you'll understand:
 ## 🛤️ Learning Path
 
 ### 🟢 **Beginner Level (Start Here)**
-*Estimated time: 2-3 hours*
+
+_Estimated time: 2-3 hours_
 
 1. **📋 Prerequisites Check**
+
    ```bash
    python --version  # Should be 3.11+
    uv --version      # Package manager
@@ -64,8 +67,9 @@ After working through this repository, you'll understand:
    - Object references (`ray.get`, `ray.put`)
    - Common patterns and anti-patterns
 
-### 🟡 **Intermediate Level**  
-*Estimated time: 3-4 hours*
+### 🟡 **Intermediate Level**
+
+_Estimated time: 3-4 hours_
 
 4. **👥 Stateful Actors** - `ray_actors.py`
    - Actor lifecycle and state management
@@ -74,12 +78,13 @@ After working through this repository, you'll understand:
 
 5. **⚡ Advanced Features** - `ray_advanced.py`
    - Distributed object store
-   - Runtime environments  
+   - Runtime environments
    - Resource allocation and fractional resources
    - Nested tasks and patterns
 
 ### 🔴 **Advanced Level**
-*Estimated time: 4-5 hours*
+
+_Estimated time: 4-5 hours_
 
 6. **🤖 ML Workflows** - `ray_ai.py`
    - Ray integration with XGBoost
@@ -92,6 +97,7 @@ After working through this repository, you'll understand:
    - Checkpointing and metrics
 
 ### 🏁 **Checkpoints**
+
 - ✅ Can create and call remote functions
 - ✅ Understand ObjectRefs and object store
 - ✅ Can implement and use Ray actors
@@ -107,7 +113,7 @@ ray_fundamentals/
 ├── 📦 pyproject.toml           # Project dependencies & config
 ├── 🐍 Python Learning Modules:
 │   ├── ray_minimal_test.py     # ✅ Installation verification
-│   ├── ray_core.py             # 🏗️ Remote functions & ObjectRefs  
+│   ├── ray_core.py             # 🏗️ Remote functions & ObjectRefs
 │   ├── ray_actors.py           # 👥 Stateful actors & communication
 │   ├── ray_advanced.py         # ⚡ Object store & runtime environments
 │   ├── ray_ai.py               # 🤖 XGBoost ML workflow
@@ -123,20 +129,21 @@ ray_fundamentals/
 
 ### 📋 Detailed File Descriptions
 
-| File | Purpose | Key Concepts | Prerequisites |
-|------|---------|-------------|---------------|
-| `ray_minimal_test.py` | **🧪 Verify setup** | Ray initialization, basic remote functions | Python basics |
-| `ray_core.py` | **🏗️ Foundation concepts** | `@ray.remote`, `ray.get()`, `ray.put()`, anti-patterns | None |
-| `ray_actors.py` | **👥 Stateful computing** | Actor classes, state management, handles | `ray_core.py` |
-| `ray_advanced.py` | **⚡ Advanced patterns** | Object store, runtime envs, resources, nested tasks | `ray_actors.py` |
-| `ray_ai.py` | **🤖 ML integration** | XGBoost + Ray, distributed ML workflows | ML basics, pandas |
-| `ray_torch.py` | **🔥 Distributed training** | Ray Train, PyTorch DDP, checkpointing | PyTorch knowledge |
+| File                  | Purpose                     | Key Concepts                                           | Prerequisites     |
+| --------------------- | --------------------------- | ------------------------------------------------------ | ----------------- |
+| `ray_minimal_test.py` | **🧪 Verify setup**         | Ray initialization, basic remote functions             | Python basics     |
+| `ray_core.py`         | **🏗️ Foundation concepts**  | `@ray.remote`, `ray.get()`, `ray.put()`, anti-patterns | None              |
+| `ray_actors.py`       | **👥 Stateful computing**   | Actor classes, state management, handles               | `ray_core.py`     |
+| `ray_advanced.py`     | **⚡ Advanced patterns**    | Object store, runtime envs, resources, nested tasks    | `ray_actors.py`   |
+| `ray_ai.py`           | **🤖 ML integration**       | XGBoost + Ray, distributed ML workflows                | ML basics, pandas |
+| `ray_torch.py`        | **🔥 Distributed training** | Ray Train, PyTorch DDP, checkpointing                  | PyTorch knowledge |
 
 ## 🚀 Quick Start
 
 ### **System Requirements**
+
 - **Python:** 3.11 or higher
-- **Memory:** 4GB+ RAM recommended  
+- **Memory:** 4GB+ RAM recommended
 - **OS:** Linux, macOS, or Windows with WSL
 
 ### **1. Setup Environment**
@@ -161,6 +168,7 @@ uv run ray_minimal_test.py
 ```
 
 **Expected output:**
+
 ```
 Ray initialized successfully!
 Available resources: {'CPU': 1.0, 'memory': 256000000}
@@ -180,6 +188,7 @@ uv run ray_core.py
 ## 🧠 Key Ray Concepts
 
 ### **🔧 Remote Functions (Tasks)**
+
 ```python
 @ray.remote
 def compute_task(data):
@@ -189,15 +198,17 @@ def compute_task(data):
 future = compute_task.remote(my_data)
 result = ray.get(future)  # Retrieve result
 ```
+
 **Files:** `ray_core.py`, `ray_advanced.py`
 
 ### **👥 Actors (Stateful Workers)**
+
 ```python
-@ray.remote 
+@ray.remote
 class StatefulWorker:
     def __init__(self):
         self.state = {}
-    
+
     def update(self, key, value):
         self.state[key] = value
 
@@ -205,17 +216,21 @@ class StatefulWorker:
 worker = StatefulWorker.remote()
 worker.update.remote("key", "value")
 ```
+
 **Files:** `ray_actors.py`
 
 ### **🗃️ Object Store**
+
 ```python
 # Store large objects once, reference many times
 large_data = ray.put(massive_dataset)
 results = [process_data.remote(large_data) for _ in range(10)]
 ```
+
 **Files:** `ray_advanced.py`
 
 ### **🤖 ML Integration**
+
 ```python
 # Distributed training with Ray Train
 from ray.train.xgboost import XGBoostTrainer
@@ -225,16 +240,18 @@ trainer = XGBoostTrainer(
 )
 result = trainer.fit()
 ```
+
 **Files:** `ray_ai.py`, `ray_torch.py`
 
 ## ▶️ Running Examples
 
 ### **Basic Execution**
+
 ```bash
 # Method 1: Using uv (recommended)
 uv run <script_name>.py
 
-# Method 2: Direct python execution  
+# Method 2: Direct python execution
 python <script_name>.py
 
 # Method 3: With custom memory limits
@@ -265,7 +282,7 @@ uv run ray_minimal_test.py
 uv run ray_core.py
 
 # 3. Explore actors
-uv run ray_actors.py  
+uv run ray_actors.py
 
 # 4. Advanced patterns
 ./run_ray_safe.sh  # runs ray_advanced.py
@@ -286,12 +303,13 @@ The `docs/` directory contains additional learning resources:
 
 ### **📄 Available Documentation**
 
-| Document | Description | Key Topics |
-|----------|-------------|------------|
-| `ray_resources.md` | **CPU/GPU Resource Management** | `num_cpus`, `num_gpus`, resource allocation |
+| Document               | Description                        | Key Topics                                          |
+| ---------------------- | ---------------------------------- | --------------------------------------------------- |
+| `ray_resources.md`     | **CPU/GPU Resource Management**    | `num_cpus`, `num_gpus`, resource allocation         |
 | `ray_runtime_notes.md` | **Runtime Environments Deep Dive** | Environment isolation, pip vs uv, Docker containers |
 
 ### **📖 Reading Order**
+
 1. Start with code examples
 2. Reference `ray_resources.md` when working with `ray_advanced.py`
 3. Review `ray_runtime_notes.md` for production deployment insights
@@ -300,19 +318,19 @@ The `docs/` directory contains additional learning resources:
 
 ### **🧹 Cleanup Scripts**
 
-| Script | Purpose | Usage |
-|--------|---------|-------|
-| `cleanup_ray.sh` | Remove Ray temporary files | `./cleanup_ray.sh` |
+| Script            | Purpose                    | Usage               |
+| ----------------- | -------------------------- | ------------------- |
+| `cleanup_ray.sh`  | Remove Ray temporary files | `./cleanup_ray.sh`  |
 | `run_ray_safe.sh` | Execute with memory limits | `./run_ray_safe.sh` |
 
 ### **🚨 Common Issues & Solutions**
 
-| Issue | Symptoms | Solution |
-|-------|----------|----------|
-| **Memory errors** | Ray crashes, OOM kills | Use `run_ray_safe.sh` or reduce data sizes |
-| **Port conflicts** | "Address already in use" | Run `ray stop` or `./cleanup_ray.sh` |
-| **Import errors** | Module not found | Ensure `uv sync` completed successfully |
-| **Slow startup** | Long initialization times | Clean temp files with `cleanup_ray.sh` |
+| Issue              | Symptoms                  | Solution                                   |
+| ------------------ | ------------------------- | ------------------------------------------ |
+| **Memory errors**  | Ray crashes, OOM kills    | Use `run_ray_safe.sh` or reduce data sizes |
+| **Port conflicts** | "Address already in use"  | Run `ray stop` or `./cleanup_ray.sh`       |
+| **Import errors**  | Module not found          | Ensure `uv sync` completed successfully    |
+| **Slow startup**   | Long initialization times | Clean temp files with `cleanup_ray.sh`     |
 
 ### **🔍 Debugging Tips**
 
@@ -333,6 +351,7 @@ df -h /tmp  # Ray uses /tmp by default
 ### **⚙️ Configuration**
 
 **Environment Variables:**
+
 ```bash
 # Memory management
 export RAY_OBJECT_STORE_ALLOW_SLOW_STORAGE=1
@@ -348,21 +367,25 @@ export RAY_TMPDIR=/path/to/custom/tmp
 ## 🔗 Additional Resources
 
 ### **📚 Official Documentation**
+
 - [Ray Documentation](https://docs.ray.io/) - Comprehensive official docs
 - [Ray GitHub Repository](https://github.com/ray-project/ray) - Source code and issues
 - [Anyscale Platform](https://www.anyscale.com/) - Managed Ray platform
 
-### **🎓 Learning Resources** 
+### **🎓 Learning Resources**
+
 - [Ray Tutorial](https://docs.ray.io/en/latest/ray-overview/getting-started.html) - Getting started guide
 - [Ray Design Patterns](https://docs.ray.io/en/latest/ray-core/patterns/) - Common usage patterns
 - [Ray Examples](https://github.com/ray-project/ray/tree/master/python/ray/examples) - Official examples repository
 
 ### **🏗️ Architecture & Best Practices**
+
 - [Ray Architecture](https://docs.ray.io/en/latest/ray-core/overview.html) - System design overview
 - [Performance Tips](https://docs.ray.io/en/latest/ray-core/performance-tips.html) - Optimization guidelines
 - [Memory Management](https://docs.ray.io/en/latest/ray-core/memory-management.html) - Memory optimization strategies
 
 ### **🚀 Production Deployment**
+
 - [Ray Clusters](https://docs.ray.io/en/latest/cluster/getting-started.html) - Multi-node setup
 - [Kubernetes](https://docs.ray.io/en/latest/cluster/kubernetes/index.html) - K8s integration
 - [Docker](https://docs.ray.io/en/latest/ray-overview/docker.html) - Containerization guide
@@ -379,6 +402,7 @@ export RAY_TMPDIR=/path/to/custom/tmp
 ### **🤝 Contributing**
 
 This is a personal learning repository, but suggestions and improvements are welcome! Feel free to:
+
 - Report issues or errors in examples
 - Suggest additional Ray concepts to explore
 - Share alternative approaches or optimizations
@@ -386,4 +410,3 @@ This is a personal learning repository, but suggestions and improvements are wel
 ---
 
 **🎯 Happy Learning!** Start your Ray journey with the [Learning Path](#-learning-path) and dive into distributed computing! 🚀
-

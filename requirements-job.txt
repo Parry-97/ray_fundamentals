@@ -1,0 +1,20 @@
+# Dependencies matching pyproject.toml but with NumPy 1.x for PyTorch compatibility
+# Note: Ray is already provided by Anyscale cluster
+
+# Critical: Pin NumPy to 1.x to avoid compatibility issues with PyTorch
+numpy>=1.24.0,<2.0.0
+
+# PyTorch packages (matching pyproject.toml versions)
+torch>=2.8.0
+torchvision>=0.23.0
+
+# Other dependencies from pyproject.toml
+pandas>=2.3.2
+pyarrow>=17.0.0
+scikit-learn>=1.7.2
+xgboost>=3.0.5
+tqdm
+s3fs>=2025.9.0
+
+# Diffusers with torch support (if needed for your experiments)
+diffusers>=0.35.1

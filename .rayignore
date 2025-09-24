@@ -1,0 +1,61 @@
+# Python environments and build artifacts
+.venv/
+venv/
+env/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+.eggs/
+*.egg-info/
+.Python
+
+# Version control
+.git/
+.gitignore
+.github/
+
+# Notebooks and checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# Data and outputs
+data/
+*.csv
+*.json
+*.parquet
+.cache/
+cluster_storage/
+logs/
+artifacts/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# IDE and system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Documentation
+docs/
+*.md
+README.*
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Large files
+*.tar
+*.gz
+*.zip
+*.rar

@@ -28,4 +28,8 @@ url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
 [dependency-groups]
-dev = ["ipython>=9.5.0", "notebook>=7.4.5"]
+dev = [
+    "anyscale>=0.26.59",
+    "ipython>=9.5.0",
+    "notebook>=7.4.5",
+]
