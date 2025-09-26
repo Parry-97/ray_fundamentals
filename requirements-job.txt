@@ -18,3 +18,4 @@ s3fs>=2025.9.0
 
 # Diffusers with torch support (if needed for your experiments)
 diffusers>=0.35.1
+transformers>=4.56.2

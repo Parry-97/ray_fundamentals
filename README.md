@@ -25,13 +25,16 @@ This repository contains practical Python implementations and examples designed 
 
 This repository implements examples for the following **Anyscale course modules**:
 
-| Course Module                 | Repository Files                     | Key Concepts                                            |
-| ----------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| **🏗️ Ray Core Fundamentals**  | `ray_core.py`, `ray_actors.py`       | Remote functions, ObjectRefs, Actors                    |
-| **⚡ Ray Core Advanced**      | `ray_advanced.py`                    | Object Store, Runtime Environments, Resource Management |
-| **🤖 Ray AI Libraries**       | `ray_ai.py`                          | XGBoost integration, Distributed ML workflows           |
-| **🔥 Ray Train with PyTorch** | `ray_torch.py`                       | Distributed training, Model parallelism                 |
-| **🧪 Testing & Utilities**    | `ray_minimal_test.py`, shell scripts | Memory management, Cleanup utilities                    |
+| Course Module                 | Repository Files                                    | Key Concepts                                            |
+| ----------------------------- | --------------------------------------------------- | ------------------------------------------------------- |
+| **🏗️ Ray Core Fundamentals**  | `ray_core.py`, `ray_actors.py`                     | Remote functions, ObjectRefs, Actors                    |
+| **⚡ Ray Core Advanced**      | `ray_advanced.py`                                   | Object Store, Runtime Environments, Resource Management |
+| **📊 Ray Data Processing**    | `ray_data.py`                                       | Distributed data processing, ETL pipelines              |
+| **🤖 Ray AI Libraries**       | `ray_ai.py`                                         | XGBoost integration, Distributed ML workflows           |
+| **🎯 Ray Tune Optimization**  | `ray_tune.py`, `ray_tune_torch.py`                 | Hyperparameter tuning, AutoML, Experiment tracking     |
+| **🔥 Ray Train & PyTorch**    | `ray_torch.py`, `ray_torch_ddp.py`                 | Distributed training, Model parallelism, DDP            |
+| **🌐 Ray Serve Deployment**   | `ray_serve.py`                                      | ML model serving, API endpoints, Scalable inference     |
+| **🧪 Testing & Utilities**    | `ray_minimal_test.py`, shell scripts               | Memory management, Cleanup utilities                    |
 
 ### 🎯 Learning Objectives
 
